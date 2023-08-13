@@ -30,6 +30,7 @@ const WatchListPage = () => {
                   <div className="watch_info">
                     <p>{movie.summary}</p>
                   </div>
+                  <button className="remove_btn" >Remove from Watchlist</button>
                 </NavLink>
               </div>
             ))}

@@ -1,4 +1,13 @@
-.filters{
-    display: flex;
-    gap: 3rem;
+.filters {
+  display: flex;
+  gap: 3rem;
+}
+.add_btn {
+  background-color: #262626;
+  color: white;
+  font-family: inherit;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }

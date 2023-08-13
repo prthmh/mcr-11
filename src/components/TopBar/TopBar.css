@@ -16,3 +16,12 @@
   display: flex;
   gap: 2rem;
 }
+
+.search_input{
+  width: 14rem;
+  height: 1.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  padding: 0.3rem;
+  font-family: inherit;
+}

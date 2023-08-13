@@ -55,7 +55,7 @@ const Filters = () => {
         ))}
         <option value="all">All</option>
       </select>
-      <button onClick={() => navigate("/addNewMovie")}>Add Movie</button>
+      <button onClick={() => navigate("/addNewMovie")} className="add_btn" >Add Movie</button>
     </div>
   );
 };

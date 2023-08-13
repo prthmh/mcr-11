@@ -16,6 +16,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 1rem;
+  height: 500px;
 }
 
 .watch_movie_img {
@@ -34,4 +35,15 @@
 
 .watch_info > p {
   padding: 0 1rem;
+}
+
+.remove_btn {
+  background-color: #262626;
+  color: white;
+  font-family: inherit;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }

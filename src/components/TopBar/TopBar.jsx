@@ -15,11 +15,18 @@ const TopBar = () => {
     <div className="topbar">
       <div className="title">IMDB</div>
       <div className="search">
-        <input type="text" placeholder="Search Movie" onChange={handleSearch} />
+        <input type="text" placeholder="Search Movie" onChange={handleSearch} className="search_input" />
       </div>
       <div className="page_nav">
-        <NavLink to="/">Movies</NavLink>
-        <NavLink to="/watchlist">Watchlist</NavLink>
+        <NavLink to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          Movies
+        </NavLink>
+        <NavLink
+          to="/watchlist"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          Watchlist
+        </NavLink>
         <div>Starred</div>
       </div>
     </div>

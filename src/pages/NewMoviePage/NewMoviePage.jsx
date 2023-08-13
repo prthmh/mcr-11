@@ -55,10 +55,10 @@ const NewMoviePage = () => {
   };
 
   return (
-    <div>
+    <div className="new_page" >
       <ToastContainer />
       <h2>Add a new Movie</h2>
-      <form className="new_prod_form" onSubmit={handleSubmit}>
+      <form className="new_movie_form" onSubmit={handleSubmit}>
         <label className="form_label"></label>
         <label className="form_label">
           Title
@@ -140,7 +140,9 @@ const NewMoviePage = () => {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Add Movie</button>
+        <button type="submit" className="movie_add_btn">
+          Add Movie
+        </button>
       </form>
     </div>
   );
