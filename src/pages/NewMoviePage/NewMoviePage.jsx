@@ -79,7 +79,7 @@ const NewMoviePage = () => {
           />
         </label>
         <label className="form_label">
-          Genre(split genre cast by ",")
+          Genre(split genre by ",")
           <input
             type="text"
             className="form_input"
