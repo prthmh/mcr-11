@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { movies } from "../data";
 import { dataReducer } from "../reducer";
 
@@ -64,6 +64,15 @@ export const DataProvider = ({ children }) => {
   const addToWatchList = (movie) => {
     dataDispatch({ type: "ADD_TO_WATCHLIST", payload: movie });
   };
+
+  useEffect(() => {
+    const stateInStorage = JSON.parse(localStorage.getItem("mcr11"));
+    if (stateInStorage) {
+      dataDispatch({ type: "SET_STATE", payload: stateInStorage });
+    } else {
+      dataDispatch({ type: "SET_STATE", payload: dataState });
+    }
+  }, []);
 
   return (
     <DataContext.Provider

@@ -4,6 +4,7 @@ import LandingPage from "./pages/LangingPage/LandingPage";
 import PageTemplate from "./pages/PageTemplate/PageTemplate";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
 import WatchListPage from "./pages/WatchListPage/WatchListPage";
+import NewMoviePage from "./pages/NewMoviePage/NewMoviePage";
 
 function App() {
   return (
@@ -22,6 +23,14 @@ function App() {
           element={
             <PageTemplate>
               <WatchListPage />
+            </PageTemplate>
+          }
+        />
+        <Route
+          path="/addNewMovie"
+          element={
+            <PageTemplate>
+              <NewMoviePage />
             </PageTemplate>
           }
         />

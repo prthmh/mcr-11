@@ -1,5 +1,8 @@
 export const dataReducer = (dataState, { type, payload }) => {
   switch (type) {
+    case "SET_STATE":
+      dataState = payload;
+      break;
     case "GENRE_CHANGE":
       dataState = {
         ...dataState,
@@ -30,8 +33,16 @@ export const dataReducer = (dataState, { type, payload }) => {
         watchlist: [...dataState.watchlist, payload],
       };
       break;
+    case "ADD_MOVIE":
+      dataState = {
+        ...dataState,
+        allMovies: [...dataState.allMovies, payload],
+      };
+      break;
     default:
       break;
   }
+
+  localStorage.setItem("mcr11", JSON.stringify(dataState));
   return dataState;
 };

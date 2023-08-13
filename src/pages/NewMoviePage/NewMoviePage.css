@@ -1,0 +1,23 @@
+.new_prod_form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 20rem;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form_label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form_input {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 2rem;
+  margin-top: 0.2rem;
+  font: inherit;
+  font-size: 0.9rem;
+}

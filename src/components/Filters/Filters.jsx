@@ -3,12 +3,14 @@ import "./Filters.css";
 import { useData } from "../../context/DataContext";
 import { getGenreList } from "../../utils/getGenreList";
 import { getYearList } from "../../utils/getYearList";
+import { useNavigate } from "react-router-dom";
 
 const Filters = () => {
   const {
     dataState: { allMovies },
     dataDispatch,
   } = useData();
+  const navigate = useNavigate();
   const genreList = getGenreList(allMovies);
   const yearList = getYearList(allMovies);
   const ratingList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -53,7 +55,7 @@ const Filters = () => {
         ))}
         <option value="all">All</option>
       </select>
-      <button>Add Movie</button>
+      <button onClick={() => navigate("/addNewMovie")}>Add Movie</button>
     </div>
   );
 };
