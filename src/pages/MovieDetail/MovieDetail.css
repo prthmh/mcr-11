@@ -1,0 +1,27 @@
+.movie_detail {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  margin: 1rem 7rem;
+  box-shadow: 0px 11px 13px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.single_img {
+  height: 500px;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.single_movie_info{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+    flex-wrap: wrap;
+}
+.single_movie_info > p {
+    font-size: 1.2rem;
+}

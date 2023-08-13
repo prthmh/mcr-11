@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.css";
 import Filters from "../../components/Filters/Filters";
 import { useData } from "../../context/DataContext";
+import MovieCard from "../../components/MovieCard/MovieCard";
 
 const LandingPage = () => {
   const {
@@ -16,8 +17,7 @@ const LandingPage = () => {
         <div className="landing_page_list">
           {output?.map((movie) => (
             <div className="movie" key={movie.id}>
-              {movie.title}------{movie.year}-----{movie.rating}-----
-              {movie.genre}
+              <MovieCard movie={movie} />
             </div>
           ))}
         </div>

@@ -55,7 +55,6 @@ export const DataProvider = ({ children }) => {
     }
     return tempData;
   };
-  console.log(dataState.filters);
   return (
     <DataContext.Provider value={{ dataState, dataDispatch, getSortedList }}>
       {children}

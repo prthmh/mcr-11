@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import LandingPage from "./pages/LangingPage/LandingPage";
 import PageTemplate from "./pages/PageTemplate/PageTemplate";
+import MovieDetail from "./pages/MovieDetail/MovieDetail";
 
 function App() {
   return (
@@ -12,6 +13,16 @@ function App() {
           element={
             <PageTemplate>
               <LandingPage />
+            </PageTemplate>
+          }
+        />
+      </Routes>
+      <Routes>
+        <Route
+          path="/movieDetail/:movieId"
+          element={
+            <PageTemplate>
+              <MovieDetail />
             </PageTemplate>
           }
         />
