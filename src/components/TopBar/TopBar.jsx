@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TopBar.css";
 import { useData } from "../../context/DataContext";
+import { NavLink } from "react-router-dom";
 
 const TopBar = () => {
   // const [input, setInput] = useState("");
@@ -17,8 +18,8 @@ const TopBar = () => {
         <input type="text" placeholder="Search Movie" onChange={handleSearch} />
       </div>
       <div className="page_nav">
-        <div>Moview</div>
-        <div>Watchlist</div>
+        <NavLink to="/">Movies</NavLink>
+        <NavLink to="/watchlist">Watchlist</NavLink>
         <div>Starred</div>
       </div>
     </div>

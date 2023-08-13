@@ -1,8 +1,10 @@
 import React from "react";
 import "./MovieCard.css";
 import { NavLink } from "react-router-dom";
+import { useData } from "../../context/DataContext";
 
 const MovieCard = ({ movie }) => {
+  const { isInWatchList, addToWatchList } = useData();
   return (
     <div className="movie_card">
       <NavLink to={`/movieDetail/${movie.id}`} className="movide_detail_link">
@@ -16,7 +18,13 @@ const MovieCard = ({ movie }) => {
       </NavLink>
       <div className="action_btns">
         <button className="btn">Star</button>
-        <button className="btn">Add to Watchlist</button>
+        {isInWatchList(movie.id) ? (
+          <button  className="btn" >Added to watchlist</button>
+        ) : (
+          <button className="btn" onClick={() => addToWatchList(movie)}>
+            Add to Watchlist
+          </button>
+        )}
       </div>
     </div>
   );

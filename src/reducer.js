@@ -24,6 +24,12 @@ export const dataReducer = (dataState, { type, payload }) => {
         filters: { ...dataState.filters, sortType: "search", search: payload },
       };
       break;
+    case "ADD_TO_WATCHLIST":
+      dataState = {
+        ...dataState,
+        watchlist: [...dataState.watchlist, payload],
+      };
+      break;
     default:
       break;
   }

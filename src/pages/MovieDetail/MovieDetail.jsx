@@ -9,7 +9,6 @@ const MovieDetail = () => {
     dataState: { allMovies },
   } = useData();
   const findMovie = allMovies.find((movie) => movie.id === Number(movieId));
-  console.log(findMovie.genre);
   return (
     <div>
       <div className="movie_detail">

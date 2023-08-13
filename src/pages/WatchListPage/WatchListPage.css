@@ -1,0 +1,37 @@
+.watchlist_movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.watch_movie_card {
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 11px 17px 9px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.watch_movie_img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.watch_detail_link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.watch_info > p {
+  padding: 0 1rem;
+}

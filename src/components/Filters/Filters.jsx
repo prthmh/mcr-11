@@ -53,6 +53,7 @@ const Filters = () => {
         ))}
         <option value="all">All</option>
       </select>
+      <button>Add Movie</button>
     </div>
   );
 };

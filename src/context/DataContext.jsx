@@ -55,8 +55,26 @@ export const DataProvider = ({ children }) => {
     }
     return tempData;
   };
+
+  const isInWatchList = (movieId) => {
+    const movie = dataState.watchlist.find((item) => item.id === movieId);
+    return Boolean(movie);
+  };
+
+  const addToWatchList = (movie) => {
+    dataDispatch({ type: "ADD_TO_WATCHLIST", payload: movie });
+  };
+
   return (
-    <DataContext.Provider value={{ dataState, dataDispatch, getSortedList }}>
+    <DataContext.Provider
+      value={{
+        dataState,
+        dataDispatch,
+        getSortedList,
+        isInWatchList,
+        addToWatchList,
+      }}
+    >
       {children}
     </DataContext.Provider>
   );

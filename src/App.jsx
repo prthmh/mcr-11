@@ -3,6 +3,7 @@ import "./App.css";
 import LandingPage from "./pages/LangingPage/LandingPage";
 import PageTemplate from "./pages/PageTemplate/PageTemplate";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
+import WatchListPage from "./pages/WatchListPage/WatchListPage";
 
 function App() {
   return (
@@ -16,8 +17,14 @@ function App() {
             </PageTemplate>
           }
         />
-      </Routes>
-      <Routes>
+        <Route
+          path="/watchlist"
+          element={
+            <PageTemplate>
+              <WatchListPage />
+            </PageTemplate>
+          }
+        />
         <Route
           path="/movieDetail/:movieId"
           element={
